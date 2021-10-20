@@ -17,7 +17,7 @@ https://gorails.com/setup/
 
 ### Install this repository: 
 
-    git clone https://github.com/TCNJ-SE/servd.git
+    git clone https://github.com/gyezhov/SERVD_Test.git
 
 Once cloned, navigate to the servd/code directory (src) and install the project dependencies. 
 

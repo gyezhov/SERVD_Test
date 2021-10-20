@@ -1,0 +1,49 @@
+<!--This is the view page responsible for the profile page.-->
+<!-- JT: This is the view page responsible for the profile page. -->
+<!-- It includes a table with the user information and two links: -->
+<!-- 1. Manage Optional Information -->
+<!-- 2. Search for Students to Collaborate With -->
+<!DOCTYPE html>
+<html>
+    <body>
+        <!-- JT: Title for the page -->
+        <div class="container">
+            <h2>Profile Page</h2>
+        </div>
+
+        <!--JT: Table containing user information-->
+        <table align="center">
+            <thead>
+                <tr>
+                    <th>Name:</th>
+                    <td><%= "N/A" %></td>
+                </tr>
+                <tr>
+                    <th>Email:</th>
+                    <td><%= @user.email %></td>
+                </tr>
+                <tr>
+                    <th>Major:</th>
+                    <td><%= "N/A" %></td>
+                </tr>
+                <tr>
+                    <th>Academic Year:</th>
+                    <td><%= "N/A" %></td>
+                </tr>
+                <tr>
+                    <th>Area of Interest:</th>
+                    <td><%= "N/A" %></td>
+                </tr>
+            </thead>
+        </table>
+        
+        <!-- JT: The two aforementioned functions -->
+        <!-- FIXME: create links -->
+        <div class="container">
+            <br><br><br><br>
+            <h1><%= link_to "Manage Optional Information", edit_student_path %></h1>
+            <br><br><br><br>
+            <h1>Search for Students to Collaborate With</h1>
+        </div>
+    </body>
+</html>

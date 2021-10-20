@@ -1,0 +1,198 @@
+/* line 1, app/assets/stylesheets/scaffolds.scss */
+p, ol, ul, td {
+  font-size: 13px;
+  line-height: 18px;
+  margin: 33px;
+}
+
+/* line 7, app/assets/stylesheets/scaffolds.scss */
+h1 {
+  text-align: center;
+}
+
+/* line 11, app/assets/stylesheets/scaffolds.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 17, app/assets/stylesheets/scaffolds.scss */
+table {
+  border-collapse: collapse;
+  margin: auto;
+  width: 50%;
+}
+
+/* line 24, app/assets/stylesheets/scaffolds.scss */
+th {
+  padding-bottom: 12px;
+  padding-left: 15px;
+  border-bottom: 3px solid #05668d;
+  text-align: left;
+}
+
+/* line 31, app/assets/stylesheets/scaffolds.scss */
+.approved {
+  background-color: #5cb85c42;
+}
+
+/* line 35, app/assets/stylesheets/scaffolds.scss */
+.unapproved {
+  background-color: #d9534f42;
+}
+
+/* line 39, app/assets/stylesheets/scaffolds.scss */
+td {
+  padding-bottom: 7px;
+  padding-left: 15px;
+  padding-right: 5px;
+  border-bottom: 1.5px solid #02c39a;
+  text-align: left;
+  height: 30px;
+}
+
+/* line 53, app/assets/stylesheets/scaffolds.scss */
+.form {
+  margin-left: 0px;
+  margin-bottom: 20px;
+}
+
+/* line 58, app/assets/stylesheets/scaffolds.scss */
+.container-butt {
+  /*width: 100%;
+  float: right;
+  position: absolute;*/
+  width: auto;
+  padding: 10px;
+  text-align: right;
+  bottom: 50px;
+  right: 50px;
+  position: fixed;
+  color: white;
+}
+
+/* line 71, app/assets/stylesheets/scaffolds.scss */
+.container-butt, .styledButton a:link, .editButt a:link {
+  color: white;
+  background-color: #02c39a;
+  border-radius: 8px;
+  padding: 10px;
+  text-decoration: none;
+}
+
+/* line 80, app/assets/stylesheets/scaffolds.scss */
+.editButt {
+  margin: auto;
+  margin-top: 10px;
+  width: 50%;
+  padding: 10px;
+  text-align: right;
+  color: white;
+}
+
+/* line 89, app/assets/stylesheets/scaffolds.scss */
+.styledButton {
+  margin: auto;
+  display: inline-block;
+  color: white;
+}
+
+/* line 99, app/assets/stylesheets/scaffolds.scss */
+.backButt {
+  width: auto;
+  padding: 10px;
+  text-align: right;
+  bottom: 50px;
+  left: 50px;
+  position: fixed;
+  color: white;
+}
+
+/* line 111, app/assets/stylesheets/scaffolds.scss */
+.submitButt {
+  padding: 0 0 30px 30px;
+}
+
+/* line 117, app/assets/stylesheets/scaffolds.scss */
+.backButt a:link {
+  color: white;
+  background-color: #02c39a;
+  border-radius: 8px;
+  padding: 10px;
+  text-decoration: none;
+}
+
+/* line 127, app/assets/stylesheets/scaffolds.scss */
+.location-tab {
+  border-bottom: 0px white;
+}
+
+/* line 132, app/assets/stylesheets/scaffolds.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 137, app/assets/stylesheets/scaffolds.scss */
+#notice {
+  color: #428bca;
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
+}
+
+/* line 145, app/assets/stylesheets/scaffolds.scss */
+.field_with_errors {
+  padding: 0px;
+  background-color: #d9534f;
+  display: table;
+  border-radius: 3px;
+}
+
+/* line 153, app/assets/stylesheets/scaffolds.scss */
+.field_with_errors label {
+  padding: 0px;
+  background-color: #ffffff;
+}
+
+/* line 161, app/assets/stylesheets/scaffolds.scss */
+#error_explanation {
+  padding-left: 30px;
+  width: 450px;
+  border: 2px solid #d9534f;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  border-radius: 3px;
+}
+
+/* line 171, app/assets/stylesheets/scaffolds.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0;
+  background-color: #d9534f;
+  color: #fff;
+}
+
+/* line 183, app/assets/stylesheets/scaffolds.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  padding-left: 8px;
+  list-style: none;
+}
+
+/* line 190, app/assets/stylesheets/scaffolds.scss */
+label {
+  display: block;
+}
+
+/*.opportunities .organizations{
+    margin: auto;
+    width: 50%;
+    text-align: center;
+}*/

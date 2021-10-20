@@ -1,0 +1,24 @@
+/* line 5, app/assets/stylesheets/sessions.scss */
+.login-page {
+  margin: auto;
+  padding: 0 30% 0 30%;
+  text-align: center;
+}
+
+/* line 11, app/assets/stylesheets/sessions.scss */
+.login-inner {
+  text-align: left;
+  padding-left: 30%;
+  position: relative;
+  margin: 0 auto;
+}
+
+/* line 21, app/assets/stylesheets/sessions.scss */
+.login-page .login-inner li {
+  list-style-type: none;
+}
+
+/* line 25, app/assets/stylesheets/sessions.scss */
+.login-inner li a:link {
+  text-decoration: none;
+}

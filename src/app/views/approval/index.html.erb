@@ -1,0 +1,63 @@
+<head>
+</head>
+
+<h1>Approval#index</h1>
+<p>Find me in app/views/approval/index.html.erb</p>
+
+<table style="width:100%">
+    
+    <h2>Approval List</h2>
+
+
+<h3>Organizations</h3>
+
+<table class="myTable">
+  <tr>
+    <th>Name</th>
+    <th>Info</th>
+    <th>Date</th>
+    <th colspan="2">More</th>
+  </tr>
+
+   <!-- TODO: fill in <td> tags with releveant retrieved info  -->
+  <tr>
+    <% @orgs.each do |org| %>
+    <td><%= org.name %></td>
+    <td><%= org.description %></td>
+    <td><%= org.created_at %></td>
+    <td><%= link_to "View", organization_path(org) %></td>
+    <td><%= link_to "Approve", "/approval/approve_org/#{org.id}" %></td>
+    
+    <% end %>    
+  </tr>
+ 
+</table>
+
+<h3>Events</h3>
+
+<table class="myTable2">
+  <tr>
+    <th>Name</th>
+    <th>Info</th>
+    <th>Date</th>
+    <th colspan="2">More</th>
+  </tr>
+
+ <!-- TODO: fill in <td> tags with releveant retrieved info  -->
+    <tr>
+    <% @opps.each do |opp| %>
+    <td> <%= opp.name %> </td>
+    <td> <%= opp.description %> </td>
+    <td> <%= opp.created_at %> </td>
+  
+    <td><%= link_to "View", opportunity_path(opp) %></td>
+    <td><%= link_to "Approve", "/approval/approve_opp/#{opp.id}" %></td>
+  </tr>
+    <% end %>
+
+  
+</table>
+
+
+
+</body>

@@ -1,0 +1,80 @@
+<% # andradl2 %>
+<div class="organizations" align="center">
+  <h1>Organizations</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Issue Area</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @organizations.each do |organization| %>
+        <% if organization.approved? || @organization == current_user || current_user.admin? %>
+          <tr>
+            <td><%= organization.name %></td>
+            <td><%= organization.city %></td>
+            <td><%= organization.state %></td>
+            <td><%= organization.issue_area %></td>
+            <td><%= link_to 'View', organization %></td>
+            <% if current_user.admin? || current_user.org? && current_user.email == organization.email %>
+              <td><%= link_to 'Edit', edit_organization_path(organization) %></td>
+            <% else %>
+              <td></td>
+            <% end %>
+            <% if current_user.admin? %>
+              <td><%= link_to 'Delete', organization, method: :delete, data: {confirm: "Are you sure? This action will terminate this organization's account."} %></td>
+            <% else %>
+
+            <%# Only favorite if a standard user %>
+            <% unless current_user.org? or current_user.admin? %>
+              <% unless organization.user_favorited?(current_user) %>
+                <td>
+                  <%= link_to 'Favorite', 
+                    { 
+                      controller: "favorite_organizations", 
+                      action: "create", 
+                      favorite_organization: {
+                        user_id: current_user.id, 
+                        organization_id: organization.id
+                      }
+                    }, 
+                    method: :post, 
+                    data: { confirm: 'Are you sure you want to favorite this organization?' } 
+                  %>
+                </td>
+              <% else %>
+                <% favorite_organization_id = organization.get_favorite_organization_id(current_user) %>
+                <td>
+                  <%= link_to 'Unfavorite', 
+                    { 
+                      controller: "favorite_organizations", 
+                      action: "destroy", 
+                      id: favorite_organization_id
+                    }, 
+                    method: :delete, 
+                    data: { confirm: 'Are you sure you want to unfavorite this organization?' } 
+                  %>
+                </td>
+                <p>Interested in becoming an organization? Click here to apply to 
+                <%= link_to 'create an organization', new_organization_path %> 
+                to submit an organization request to be reviewed by an administrator.
+                </p>
+                  
+                  
+              <% end %>
+            <% end %>
+              
+            <% end %>
+          </tr>
+        <% end %>
+      <% end %>
+    </tbody>
+  </table>
+
+
+  <br>
+</div>

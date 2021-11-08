@@ -85,7 +85,7 @@ class Opportunity < ApplicationRecord
 
   def check_start_and_end_times
     if start_time > end_time
-      errors.add(:end_time, 'cannot be earlier than the start time')
+      errors.add(:end_time, 'Must be later than start time')
     end
   end
 

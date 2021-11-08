@@ -8,4 +8,6 @@ class OpportunityMailer < ApplicationMailer
              from: "servdteam@servd.org",
              subject: opportunity.organization.name + " created a new event!"
     end 
+
+    # FIXME: add notification when an opportunity's time slot has been passed
 end

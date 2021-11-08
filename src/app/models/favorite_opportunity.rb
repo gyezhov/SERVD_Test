@@ -5,6 +5,6 @@ class FavoriteOpportunity < ApplicationRecord
   belongs_to :opportunity
 
   validates :user_id, uniqueness: { scope: :opportunity_id,
-                                    message: 'cannot favorite the same event twice!' }
+                                    message: 'Event already favorited' }
 
 end

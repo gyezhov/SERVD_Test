@@ -20,8 +20,8 @@ ActiveRecord::Schema.define(version: 2020_04_23_212526) do
     t.bigint "opportunity_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["opportunity_id"], name: "index_favorite_opportunities_on_opportunity_id"
-    t.index ["user_id"], name: "index_favorite_opportunities_on_user_id"
+    t.index ["opportunity_id"], name: "index_favorite_opportunities_for_opportunity_id"
+    t.index ["user_id"], name: "index_favorite_opportunities_for_user_id"
   end
 
   create_table "favorite_organizations", force: :cascade do |t|
@@ -29,8 +29,8 @@ ActiveRecord::Schema.define(version: 2020_04_23_212526) do
     t.bigint "organization_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["organization_id"], name: "index_favorite_organizations_on_organization_id"
-    t.index ["user_id"], name: "index_favorite_organizations_on_user_id"
+    t.index ["organization_id"], name: "index_favorite_organizations_for_organization_id"
+    t.index ["user_id"], name: "index_favorite_organizations_for_user_id"
   end
 
   create_table "notifications", force: :cascade do |t|
@@ -40,8 +40,8 @@ ActiveRecord::Schema.define(version: 2020_04_23_212526) do
     t.datetime "updated_at", null: false
     t.bigint "organization_id"
     t.bigint "opportunity_id"
-    t.index ["opportunity_id"], name: "index_notifications_on_opportunity_id"
-    t.index ["organization_id"], name: "index_notifications_on_organization_id"
+    t.index ["opportunity_id"], name: "index_notifications_for_opportunity_id"
+    t.index ["organization_id"], name: "index_notifications_for_organization_id"
   end
 
   create_table "opportunities", force: :cascade do |t|
@@ -64,8 +64,8 @@ ActiveRecord::Schema.define(version: 2020_04_23_212526) do
     t.datetime "updated_at", null: false
     t.string "primary_tag_id"
     t.string "secondary_tag_id"
-    t.index ["issue_area"], name: "index_opportunities_on_issue_area"
-    t.index ["organization_id"], name: "index_opportunities_on_organization_id"
+    t.index ["issue_area"], name: "index_opportunities_for_issue_area"
+    t.index ["organization_id"], name: "index_opportunities_for_organization_id"
   end
 
   create_table "organizations", force: :cascade do |t|

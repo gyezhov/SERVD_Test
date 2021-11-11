@@ -21,7 +21,8 @@ class UsersController < ApplicationController
   # Function: show
   # This is not really used but would display the user info
   def show
-    @user = User.find_by(email: params[:email])
+    @user = current_user
+    #@user = User.find_by(email: params[:email])
   end
 
   # Function: new
@@ -103,7 +104,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:email, :password,
+    params.require(:user).require(:name, :major, :acYear, :email, :password,
                                 :password_confirmation, :user_type, :admin, :tag)
   end
 end

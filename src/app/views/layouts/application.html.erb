@@ -19,7 +19,7 @@
       <% if user_signed_in? %>
         <li class="nav-hover"> <%= link_to "Events", opportunities_path %></li>
         <li class="nav-hover"> <%= link_to "Organizations", organizations_path %></li>
-        <li class="nav-hover"> <%= link_to "Dashboard", dashboard_path_url %></li>
+        <li class="nav-hover"> <%= link_to "Favorites", dashboard_path_url %></li>
         <li class="nav-hover"> <%= link_to "Notifications", notifications_path %></li>
         <% if current_user.admin %>
           <li class="nav-hover"><%= link_to "Manage Interests", "/add_tags"  %></li>

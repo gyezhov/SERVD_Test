@@ -21,7 +21,8 @@ class UsersController < ApplicationController
   # Function: show
   # This is not really used but would display the user info
   def show
-    @user = User.find_by(email: params[:email])
+    #@user = current_user
+    @user = User.find(user_params)
   end
 
   # Function: new
@@ -90,9 +91,18 @@ class UsersController < ApplicationController
   end
 
   #JT: Used for editing optional information
-  def edit
-    @user = current_user
-    # @user = User.find_by(email: params[:email])
+  def update
+    puts params
+    respond_to do |format|
+      if @user.update(user_params)
+        @user = current_user
+      else
+        format.html { render :edit }
+        format.json { render json: @user.errors, status: :unprocessable_entity }
+      end
+    end
+    #@user = current_user
+    #@user = User.find_by(email: params[:email])
   end
 
     # Use callbacks to share common setup or constraints between actions.
@@ -104,6 +114,6 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:email, :password,
-                                :password_confirmation, :user_type, :admin, :tag)
+                                :password_confirmation, :user_type, :admin, :tag, [:name, :major, :acYear])
   end
 end
